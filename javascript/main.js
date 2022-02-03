@@ -162,6 +162,7 @@ class LabyrintheStart extends Phaser.Scene {
     
     wall = this.add.sprite(9, h - 126, "wall");
     wall.setScale(0.05);
+    
 
     doorDroite = this.physics.add.staticSprite(w - 35, (h / 2) - 20, "door"); 
     doorDroite.setSize(18, 80);
