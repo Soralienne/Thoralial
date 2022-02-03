@@ -146,7 +146,7 @@ class LabyrintheStart extends Phaser.Scene {
       frameRate : 7,
       repeat : 0
     })
-
+lol
     this.anims.create({
       key : "playerWalkLeft",
       frames : [
