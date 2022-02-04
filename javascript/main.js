@@ -61,8 +61,11 @@ class SceneStart extends Phaser.Scene {
     player.setScale(1, 1);
     player.body.setSize(30, 35);
     
-    wall = this.add.sprite((w - w) + 9, h - 126, "wall"); //mur
-    wall.setScale(0.05);
+    wall1 = this.add.sprite((w - w) + 9, h - 126, "wall"); //mur
+    wall1.setScale(0.05);
+
+    wall2 = this.add.sprite(400, 500, "wall");
+    wall2.setScale(0.5);
 
     doorStart = this.physics.add.staticSprite((w / 2) - 20, 28, "door"); //Porte principale
     doorStart.setScale(0.3);
@@ -70,7 +73,8 @@ class SceneStart extends Phaser.Scene {
     doorStart.body.setOffset(-56, 472);
     doorStart.rotation += -20.42;
 
-    platforms.add(wall);
+    platforms.add(wall1);
+    platforms.add(wall2);
     this.physics.add.collider(platforms, player); //collision
     player.setCollideWorldBounds(true); //collision avec la bordure
     
@@ -309,7 +313,7 @@ var config = {
   physics: {
     default : "arcade",
     arcade : {
-      debug : false,
+      debug : true,
     }
   },
   scene: [SceneStart, LabyrintheStart /**, LabyrintheDeux*/]
@@ -326,7 +330,8 @@ var doorGauche;
 var doorDroite;
 var doorUp;
 var doorStart;
-var wall;
+var wall1;
+var wall2;
 var platforms;
 
 // A rajouter plus tard
