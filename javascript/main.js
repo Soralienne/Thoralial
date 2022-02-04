@@ -57,15 +57,12 @@ class SceneStart extends Phaser.Scene {
      * })
      */
 
-    player = this.physics.add.sprite((w - w) + 34, h, "player"); //joueur
+    player = this.physics.add.sprite((w - w) + 34, h / 2, "player"); //joueur
     player.setScale(1, 1);
     player.body.setSize(30, 35);
     
-    wall1 = this.add.sprite((w - w) + 9, h - 126, "wall"); //mur
-    wall1.setScale(0.05);
-
-    wall2 = this.add.sprite(400, 500, "wall");
-    wall2.setScale(0.3);
+    wall1 = this.add.sprite(200, 150, "wall");
+    wall1.setScale(0.3);
 
     doorStart = this.physics.add.staticSprite((w / 2) - 20, 28, "door"); //Porte principale
     doorStart.setScale(0.3);
@@ -74,7 +71,6 @@ class SceneStart extends Phaser.Scene {
     doorStart.rotation += -20.42;
 
     platforms.add(wall1);
-    platforms.add(wall2);
     this.physics.add.collider(platforms, player); //collision
     player.setCollideWorldBounds(true); //collision avec la bordure
     
@@ -163,15 +159,15 @@ class LabyrintheStart extends Phaser.Scene {
     player = this.physics.add.sprite(34, h, "player");
     player.setScale(1, 1);
     player.body.setSize(30, 35);
-    
-    wall = this.add.sprite(9, h - 126, "wall");
-    wall.setScale(0.05);
+        
+    wall1 = this.add.sprite(9, h - 126, "wall");
+    wall1.setScale(0.05);
 
     doorDroite = this.physics.add.staticSprite(w - 35, (h / 2) - 20, "door"); 
     doorDroite.setSize(18, 80);
     doorDroite.setScale(0.08);
 
-    platforms.add(wall);
+    platforms.add(wall1);
     this.physics.add.collider(platforms, player);
     player.setCollideWorldBounds(true);
 
