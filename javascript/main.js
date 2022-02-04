@@ -57,23 +57,25 @@ class SceneStart extends Phaser.Scene {
      * })
      */
 
-    player = this.physics.add.sprite((w / 2) + 34, h, "player"); //joueur
+    player = this.physics.add.sprite((w / 2), h, "player"); //joueur
     player.setScale(1, 1);
     player.body.setSize(30, 35);
     
-    wall1 = this.add.sprite(200, 150, "wall");
+    wall1 = this.add.sprite(200, 146, "wall");
     wall1.setScale(0.3);
 
-    wall2 = this.add.sprite(200, 600, "wall");
+    wall2 = this.add.sprite(200, 445, "wall");
+    wall2.setFlip(false, true);
     wall2.setScale(0.3);
 
-    wall3 = this.add.sprite((w - 200), 150, "wall");
+    wall3 = this.add.sprite((w - 200), 146, "wall");
     wall3.setScale(0.3);
 
-    wall4 = this.add.sprite((w - 200), 600, "wall");
+    wall4 = this.add.sprite((w - 200), 445, "wall");
+    wall4.setFlip(false, true);
     wall4.setScale(0.3);
 
-    doorStart = this.physics.add.staticSprite((w / 2) - 20, 28, "door"); //Porte principale
+    doorStart = this.physics.add.staticSprite((w / 2), 28, "door"); //Porte principale
     doorStart.setScale(0.3);
     doorStart.body.setSize(300, 55);
     doorStart.body.setOffset(-56, 472);
@@ -81,6 +83,8 @@ class SceneStart extends Phaser.Scene {
 
     platforms.add(wall1);
     platforms.add(wall2);
+    platforms.add(wall3);
+    platforms.add(wall4);
     this.physics.add.collider(platforms, player); //collision
     player.setCollideWorldBounds(true); //collision avec la bordure
     
@@ -319,7 +323,7 @@ var config = {
   physics: {
     default : "arcade",
     arcade : {
-      debug : true,
+      debug : false,
     }
   },
   scene: [SceneStart, LabyrintheStart /**, LabyrintheDeux*/]
