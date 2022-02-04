@@ -65,7 +65,7 @@ class SceneStart extends Phaser.Scene {
     wall1.setScale(0.05);
 
     wall2 = this.add.sprite(400, 500, "wall");
-    wall2.setScale(0.5);
+    wall2.setScale(0.3);
 
     doorStart = this.physics.add.staticSprite((w / 2) - 20, 28, "door"); //Porte principale
     doorStart.setScale(0.3);

@@ -42,7 +42,7 @@
     
     <div id="personne">
       <p>
-        Ce projet a étais réalisé par : <a href="https://thorvaldcv.000webhostapp.com/"> Thorvald HELBLING</a>, <a href="#presentation"> Lionel FUCHS </a> et <a href="https://alexiscv.000webhostapp.com/"> Alexis STOCK </a>
+        Ce projet a étais réalisé par : <a href="https://thorvaldcv.000webhostapp.com/"> Thorvald HELBLING</a>, <a href="htpps://lionelcv.000webhostapp.com"> Lionel FUCHS </a> et <a href="https://alexiscv.000webhostapp.com/"> Alexis STOCK </a>
       </p>
     </div>
 
