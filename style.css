@@ -1,11 +1,82 @@
+    
+footer{
+    position:absolute;
+    bottom: -360px;;
+    width:100%;
+    padding-top:0px;
+    height:0px;
+    text-align: right;
+    
+    }
 #LogoThoralial {
-	width: 100px;
+	width: 180px;
 }
 
-footer {
-	text-align: right;	
+
+
+#couleur2fond{
+    background-color: #f4985a;
+
 }
 
 .hidden {
 	display: none;
+}
+
+header.headfon{
+    background-color: #f4985a;
+
+}
+.header_navbar{
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+
+
+
+}
+#texttitre{
+    background-color: #a1b6c0;
+    color: rgb(25, 34, 71);
+    text-align: center;
+    padding: 10px;
+    font-size: 50px;
+    font-family: Apple Chancery, cursive;
+    font-weight: bold;
+    border-radius: 50px;
+    top: 50%;
+    left: 100%;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+
+nav.listpuce2 ul li.btn{
+    list-style-type: none;
+    display: inline-block;
+    flex-direction: row;
+    justify-content: space-between;
+}
+nav.listpuce2 ul li.btn a{
+    color: rgb(25, 34, 71);
+    text-decoration: none;
+    background-color: #a1b6c0;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 30px;
+}
+
+nav.listpuce2 ul li.btn:hover a{
+    color: #a1b6c0;
+    background-color: rgb(25, 34, 71);
+    transition: 0.35s all;
+}
+#para{
+    padding:10px;
+    font-size: 25px;
+    font-family: Apple Chancery, cursive;
+    color: rgb(25, 34, 71);
+    background-color: #a1b6c0;
+
+
 }
